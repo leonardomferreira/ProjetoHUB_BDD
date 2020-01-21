@@ -8,7 +8,9 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
  features = "Feature"
- ,glue={"br.com.rsinet.hub_bdd.stepDefinition"}
+ ,glue={"br.com.rsinet.hub_bdd.stepDefinitionsSearch"}
+ ,tags = {"@SearchTest"}
+ 
  )
 
 public class TestRunner {

@@ -111,7 +111,7 @@ public class Register_Page {
     }
 
     public void RegisterValid() {
-        enter_UserName("leonardow992322");
+        enter_UserName("leonardow9925");
         enter_Email("leonardoferreiraw@hotmail.com");
         enter_Password("Teste@1234");
         enter_ConfirmPassword("Teste@1234");

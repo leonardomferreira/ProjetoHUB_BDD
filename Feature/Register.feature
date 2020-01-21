@@ -1,5 +1,6 @@
 Feature: Register Action
 
+@RegisterTest @Valid
 Scenario: Successful Register with Valid Credentials
 	Given User is on Home Page
 	When User Navigate to LogIn Page
@@ -7,6 +8,7 @@ Scenario: Successful Register with Valid Credentials
 	And user correctly fill in all fields
 	Then will be successfully registered
 	
+@RegisterTest @Invalid
 Scenario: Fail Register with Valid Credentials
 	Given User is on Home Page
 	When User Navigate to LogIn Page

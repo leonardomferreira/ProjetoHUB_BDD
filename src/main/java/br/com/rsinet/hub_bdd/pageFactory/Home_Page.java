@@ -1,14 +1,20 @@
 package br.com.rsinet.hub_bdd.pageFactory;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class Home_Page {
+import br.com.rsinet.hub_bdd.managers.FileReaderManager;
 
+
+public class Home_Page {
+	WebDriver driver;
+	
 	public Home_Page(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -24,6 +30,25 @@ public class Home_Page {
 	@FindBy(how = How.ID, using ="autoComplete")
 	private WebElement txt_Search;
 	
+	@FindBy(how = How.ID, using ="laptopsTxt")
+	private WebElement lnk_Laptops_Home;
+	
+	@FindBy(how = How.ID, using = "details_10")
+	private WebElement lnk_Detalhes;
+	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"popular_items\"]/div/div[2]/p")
+	private WebElement txt_Notebook_Home;
+	
+	public String laptop_Home() {
+		return txt_Notebook_Home.getText();
+	}
+	
+	public void ver_Detalhes() {
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("arguments[0].click();", lnk_Detalhes);
+//		lnk_Detalhes.click();
+	}
+			
 	public void menu_User() {
 		btn_Login.click();
 	}
@@ -35,6 +60,16 @@ public class Home_Page {
 	}
 	public void auto_Complete(String complete) {
 		txt_Search.sendKeys(complete);
+	}
+	public void laptops_Home() {
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("arguments[0].click();", lnk_Laptops_Home);
+		
+	}
+	public void navigateTo_HomePage() {
+		
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+		
 	}
 }
 
