@@ -1,6 +1,7 @@
 package br.com.rsinet.hub_bdd.pageFactory;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -60,6 +61,7 @@ public class Home_Page {
 	}
 	public void auto_Complete(String complete) {
 		txt_Search.sendKeys(complete);
+		txt_Search.sendKeys(Keys.ENTER);
 	}
 	public void laptops_Home() {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;

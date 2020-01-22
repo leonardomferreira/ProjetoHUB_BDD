@@ -1,5 +1,8 @@
 package br.com.rsinet.hub_bdd.pageFactory;
 
+import java.io.IOException;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,9 +10,15 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class Register_Page {
+import com.cucumber.listener.Reporter;
 
+import br.com.rsinet.hub_bdd.util.Screenshot;
+import br.com.rsinet.hub_bdd.util.Wait;
+
+public class Register_Page {
+WebDriver driver;
 	public Register_Page(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -110,8 +119,8 @@ public class Register_Page {
         btn_Register.click();
     }
 
-    public void RegisterValid() {
-        enter_UserName("leonardow9925");
+    public void RegisterValid()  {
+        enter_UserName("leonardow70");
         enter_Email("leonardoferreiraw@hotmail.com");
         enter_Password("Teste@1234");
         enter_ConfirmPassword("Teste@1234");
@@ -125,11 +134,17 @@ public class Register_Page {
         enter_PostalCode("06223070");
         accept_Terms();
         click_Register();
+
+        Wait.untilJqueryIsDone(driver);
+//		Screenshot.captureScreenShot(driver);
+
     }
    
     public void RegisterFail() {
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+
     	enter_UserName("leonardow99");
-        enter_Email("leonardoferr@#$eiraw@hotmail.com");
+        enter_Email("leonardoferreiraw@hotmail.com");
         enter_Password("Teste@1234");
         enter_ConfirmPassword("Teste@1234");
         enter_FirstName("Leonardo");
@@ -139,9 +154,12 @@ public class Register_Page {
         enter_City("Osasco");
         enter_Address("Rua Alto Alegre");
         enter_State("São Paulo");
-        enter_PostalCode("06223070");
+        enter_PostalCode("06223070@#$#");
         accept_Terms();
         click_Register();
+        
+		Wait.untilJqueryIsDone(driver);
+//		Screenshot.captureScreenShot(driver);
     }
 
 }
