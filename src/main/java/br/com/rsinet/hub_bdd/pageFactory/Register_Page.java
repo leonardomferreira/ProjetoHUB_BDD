@@ -120,7 +120,7 @@ WebDriver driver;
     }
 
     public void RegisterValid()  {
-        enter_UserName("leonardow70");
+        enter_UserName("leonardor34");
         enter_Email("leonardoferreiraw@hotmail.com");
         enter_Password("Teste@1234");
         enter_ConfirmPassword("Teste@1234");

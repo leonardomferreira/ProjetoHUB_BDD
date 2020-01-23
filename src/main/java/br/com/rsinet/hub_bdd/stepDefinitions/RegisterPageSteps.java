@@ -10,7 +10,6 @@ import br.com.rsinet.hub_bdd.managers.WebDriverManager;
 import br.com.rsinet.hub_bdd.pageFactory.Home_Page;
 import br.com.rsinet.hub_bdd.pageFactory.Login_Page;
 import br.com.rsinet.hub_bdd.pageFactory.Register_Page;
-import br.com.rsinet.hub_bdd.util.Hooks;
 import br.com.rsinet.hub_bdd.util.Screenshot;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -41,7 +40,6 @@ public class RegisterPageSteps {
 	@Then("^will be successfully registered$")
 	public void will_be_successfully_registered() throws Throwable {
 		System.out.println("usuario registrado");
-		manager.closeDriver();
 	}
 	
 	//Invalid
@@ -54,7 +52,6 @@ public class RegisterPageSteps {
 	@Then("^failed to register the user$")
 	public void failed_to_register_the_user() throws Throwable {
 		System.out.println("usuario nao registrado");
-		manager.closeDriver();
 	}
 
 }

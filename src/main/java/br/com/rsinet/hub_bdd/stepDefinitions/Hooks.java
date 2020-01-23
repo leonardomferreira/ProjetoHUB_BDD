@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_bdd.util;
+package br.com.rsinet.hub_bdd.stepDefinitions;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,6 +12,7 @@ import com.google.common.io.Files;
 
 import br.com.rsinet.hub_bdd.cucumber.TestContext;
 import br.com.rsinet.hub_bdd.managers.WebDriverManager;
+import br.com.rsinet.hub_bdd.util.Wait;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -45,7 +46,7 @@ public class Hooks {
 		// Also make sure to create a folder 'screenshots' with in the cucumber-report
 		// folder
 		File destinationPath = new File(
-				System.getProperty("user.dir") + "/target/cucumber-reports/screenshots/" + screenshotName + ".png");
+				"C:\\Users\\leonardo.ferreira\\eclipse-workspace\\ProjetoHUB_bdd\\target\\screenshots\\" + screenshotName + ".png");
 
 		// Copy taken screenshot from source location to destination location
 		Files.copy(sourcePath, destinationPath);

@@ -37,7 +37,8 @@ public class ProductsPageSteps {
 	public void user_click_on_the_desired_products() throws Throwable {
 		Wait.untilJqueryIsDone(driver);
 		productsPage.search_Laptop();
-//		Screenshot.captureScreenShot(driver);
+		productsPage.btn_Card();
+
 	}
 
 	@Then("^successfully researched product$")
@@ -52,6 +53,9 @@ public class ProductsPageSteps {
 		String LaptopInvalido = productsPage.title_Laptop();
 		System.out.println(LaptopInvalido);
 		assertEquals(LaptopHomeInvalido.equals(LaptopInvalido), false);
+		
+		productsPage.Img_Laptop();
+		
 	}
 	//valid
 	@When("^user click on product$")
@@ -61,6 +65,7 @@ public class ProductsPageSteps {
 	@Then("^success when looking for the product$")
 	public void success_when_looking_for_the_product() throws Throwable {
 		String TitleRoarValid = productsPage.txt_Roar();
+		productsPage.Img_Roar();
 		
 		assertEquals(TitleRoarValid, "HP ROAR MINI WIRELESS SPEAKER");
 	}
@@ -69,6 +74,5 @@ public class ProductsPageSteps {
 	public void fail_when_looking_for_the_product() throws Throwable {
 		String sNoResult = productsPage.title_NoResultFor();
 		assertEquals(true, sNoResult.contains("No results for"));
-		
 	}
 }

@@ -17,7 +17,7 @@ public class Screenshot {
 
         File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(src, new File("C:\\Users\\leonardo.ferreira\\eclipse-workspace\\ProjetoBDD\\target\\screenshots" 
+            FileUtils.copyFile(src, new File("C:\\Users\\leonardo.ferreira\\eclipse-workspace\\ProjetoHUB_bdd\\target\\screenshots" 
                     + System.currentTimeMillis() + ".png"));
         }
         catch (IOException e)
