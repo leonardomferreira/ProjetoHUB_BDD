@@ -32,25 +32,25 @@ public class RegisterPageSteps {
 		 }
 	
 	//valid
-	@When("^user correctly fill in all fields$")
-	public void user_correctly_fill_in_all_fields() throws Throwable {
+	@When("^Usuario peencher os campos com dados validos$")
+	public void usuario_peencher_os_campos_com_dados_validos() throws Throwable {
 		registerPage.RegisterValid();
 	}
 	
-	@Then("^will be successfully registered$")
-	public void will_be_successfully_registered() throws Throwable {
+	@Then("^Usuario sera registrado com sucesso$")
+	public void usuario_sera_registrado_com_sucesso() throws Throwable {
 		System.out.println("usuario registrado");
 	}
 	
 	//Invalid
-	@When("^user incorrectly fill in all fields$")
-	public void user_incorrectly_fill_in_all_fields() throws Throwable {
+	@When("^Usuario peencher os campos com dados invalidos$")
+	public void usuario_peencher_os_campos_com_dados_invalidos() throws Throwable {
 		registerPage.RegisterFail();
 		
 
 	}
-	@Then("^failed to register the user$")
-	public void failed_to_register_the_user() throws Throwable {
+	@Then("^Usuario nao sera registrado$")
+	public void usuario_nao_sera_registrado() throws Throwable {
 		System.out.println("usuario nao registrado");
 	}
 

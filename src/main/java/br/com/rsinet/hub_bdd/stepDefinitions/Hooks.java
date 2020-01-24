@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import com.cucumber.listener.Reporter;
 import com.google.common.io.Files;
 
+import br.com.rsinet.hub_bdd.cucuberTest.TestRunner;
 import br.com.rsinet.hub_bdd.cucumber.TestContext;
 import br.com.rsinet.hub_bdd.managers.WebDriverManager;
 import br.com.rsinet.hub_bdd.util.Wait;
@@ -45,8 +46,7 @@ public class Hooks {
 		// Building up the destination path for the screenshot to save
 		// Also make sure to create a folder 'screenshots' with in the cucumber-report
 		// folder
-		File destinationPath = new File(
-				"C:\\Users\\leonardo.ferreira\\eclipse-workspace\\ProjetoHUB_bdd\\target\\screenshots\\" + screenshotName + ".png");
+		File destinationPath = new File(TestRunner.caminhoPasta + "/" + screenshotName + ".png");
 
 		// Copy taken screenshot from source location to destination location
 		Files.copy(sourcePath, destinationPath);

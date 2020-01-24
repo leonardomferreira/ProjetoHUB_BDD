@@ -2,6 +2,11 @@ package br.com.rsinet.hub_bdd.util;
 
 import com.cucumber.listener.Reporter;
 
+
+/*
+ * Classe que transforma em metodo os dados do excel 
+ */
+
 public class DataExcel {
 
 	public static String nomeValidLaptop() throws Exception {

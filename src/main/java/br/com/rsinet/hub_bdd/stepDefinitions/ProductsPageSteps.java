@@ -33,45 +33,43 @@ public class ProductsPageSteps {
 				 
 		 }
 	
-	@When("^user click on the desired product$")
-	public void user_click_on_the_desired_products() throws Throwable {
+	@When("^Clicar no notebook escolhido$")
+	public void clicar_no_notebook_escolhido() throws Throwable {
 		Wait.untilJqueryIsDone(driver);
 		productsPage.search_Laptop();
-		productsPage.btn_Card();
+		productsPage.safe_Card();
 
 	}
 
-	@Then("^successfully researched product$")
-	public void successfully_researched_product() throws Throwable {
+	@Then("^A pagina do notebook escolhido será exibida$")
+	public void a_pagina_do_notebook_escolhido_será_exibida() throws Throwable {
 		System.out.println("produto pesquisado");
 	}
 	//Invalid
-	@Then("^invalid product text$")
-	public void invalid_product_text() throws Throwable {
+	@Then("^Será exibida a página de outro laptop$")
+	public void será_exibida_a_página_de_outro_laptop() throws Throwable {
 		String LaptopHomeInvalido = homePage.laptop_Home();
-		System.out.println(LaptopHomeInvalido);
 		String LaptopInvalido = productsPage.title_Laptop();
-		System.out.println(LaptopInvalido);
 		assertEquals(LaptopHomeInvalido.equals(LaptopInvalido), false);
 		
 		productsPage.Img_Laptop();
 		
 	}
 	//valid
-	@When("^user click on product$")
-	public void user_click_on_product() throws Throwable {
+	@When("^Usuario clicar no produto$")
+	public void usuario_clicar_no_produto() throws Throwable {
 		productsPage.search_Roar();
 	}
-	@Then("^success when looking for the product$")
-	public void success_when_looking_for_the_product() throws Throwable {
+	@Then("^O produto desejado sera exibido$")
+	public void o_produto_desejado_sera_exibido() throws Throwable {
 		String TitleRoarValid = productsPage.txt_Roar();
 		productsPage.Img_Roar();
 		
 		assertEquals(TitleRoarValid, "HP ROAR MINI WIRELESS SPEAKER");
 	}
 	//invalid
-	@Then("^Fail when looking for the product$")
-	public void fail_when_looking_for_the_product() throws Throwable {
+	@Then("^Nunhum resultado sera exibido$")
+	public void nunhum_resultado_sera_exibido() throws Throwable {
 		String sNoResult = productsPage.title_NoResultFor();
 		assertEquals(true, sNoResult.contains("No results for"));
 	}

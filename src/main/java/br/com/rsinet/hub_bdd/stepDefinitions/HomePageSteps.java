@@ -27,44 +27,45 @@ public class HomePageSteps {
 
 	}
 
-	@Given("^User is on Home Page$")
-	public void user_is_on_Home_Page() throws Throwable {
+	@Given("^Usuario esteja na página inicial$")
+	public void usuario_esteja_na_página_inicial() throws Throwable {
 		homePage.navigateTo_HomePage();
 
 	}
-
-	@When("^User Navigate to LogIn Page$")
-	public void user_Navigate_to_LogIn_Page() {
+	
+	
+	@When("^Usuario navegar para a pagina de Login$")
+	public void usuario_navegar_para_a_pagina_de_Login() throws Throwable {
 		homePage.my_Account();
 
 	}
 
-	// Valid
-	@When("^user click on the desired category$")
-	public void user_click_on_the_desired_category() {
+	// Pesquisa por clique valida
+	@When("^Clicar na categoria desejada$")
+	public void clicar_na_categoria_desejada() throws Throwable {
 		homePage.laptops_Home();
 	}
-	// Invalid
-
-	@When("^user click on View details$")
-	public void user_click_on_View_details() throws Throwable {
+	
+	// Pesquisa pro clique invalida
+	@When("^Usuario clicar para ver detalhes do laptop$")
+	public void usuario_clicar_para_ver_detalhes_do_laptop() throws Throwable {
 		homePage.ver_Detalhes();
 	}
 
-	// valid
-	@When("^user click on the magnifying glass$")
-	public void user_click_on_the_magnifying_glass() throws Throwable {
+	@When("^Usuario clicar na lupa$")
+	public void usuario_clicar_na_lupa() throws Throwable {
 		homePage.menu_Search();
 	}
 
-	@When("^user write the desired product$")
-	public void user_write_the_desired_product() throws Throwable {
+	// Pesquisa por texto valida
+	@When("^Usuario pesquisar pelo produto desejado$")
+	public void usuario_pesquisar_pelo_produto_desejado() throws Throwable {
 		homePage.auto_Complete(DataExcel.nomeValidLaptop());
 	}
 
-	// invalid
-	@When("^user searches for an invalid product$")
-	public void user_searches_for_an_invalid_product() throws Throwable {
+	// Pesquisa por texto invalida
+	@When("^Usuario pesquisar pelo produto invalido$")
+	public void usuario_pesquisar_pelo_produto_invalido() throws Throwable {
 		homePage.auto_Complete(DataExcel.nomeInvalidLaptop());
 	}
 

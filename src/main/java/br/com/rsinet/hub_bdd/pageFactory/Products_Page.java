@@ -10,6 +10,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
+/*
+ * 
+ */
+
 public class Products_Page {
 	WebDriver driver;
 
@@ -35,7 +40,7 @@ public class Products_Page {
 	private WebElement Title_Roar;
 		
 	@FindBy(how = How.NAME, using = "save_to_cart")
-	private WebElement Safe_Card;
+	private WebElement btn_Cart;
 	
 	@FindBy(how = How.ID, using = "mainImg")
 	private WebElement Img_Laptop;
@@ -64,9 +69,9 @@ public class Products_Page {
 	public String title_Laptop() {
 		return title_Product.getText();
 	}
-	public void btn_Card() {
+	public void safe_Card() {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOf(Safe_Card));
+		wait.until(ExpectedConditions.visibilityOf(btn_Cart));
 	}
 	public void Img_Laptop() {
 		WebDriverWait wait = new WebDriverWait(driver, 10);

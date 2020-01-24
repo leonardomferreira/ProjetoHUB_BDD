@@ -11,6 +11,11 @@ import org.openqa.selenium.support.PageFactory;
 import br.com.rsinet.hub_bdd.managers.FileReaderManager;
 
 
+
+/*
+ * Elementos da pagina inicial 
+ */
+
 public class Home_Page {
 	WebDriver driver;
 	
@@ -47,7 +52,6 @@ public class Home_Page {
 	public void ver_Detalhes() {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", lnk_Detalhes);
-//		lnk_Detalhes.click();
 	}
 			
 	public void menu_User() {

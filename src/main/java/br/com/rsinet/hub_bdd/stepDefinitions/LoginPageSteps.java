@@ -18,8 +18,8 @@ public class LoginPageSteps {
         loginPage = testContext.getPageObjectManager().getLoginPage();
 	}
 	
-	@When("^user click on the button create new account$")
-	public void user_click_on_the_button_create_new_account() throws Throwable {
+	@When("^Usuario clicar no botao criar nova conta$")
+	public void usuario_clicar_no_botao_criar_nova_conta() throws Throwable {
 		
 		loginPage.create_Account();
 

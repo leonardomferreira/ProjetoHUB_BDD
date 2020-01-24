@@ -15,6 +15,11 @@ import com.cucumber.listener.Reporter;
 import br.com.rsinet.hub_bdd.util.Screenshot;
 import br.com.rsinet.hub_bdd.util.Wait;
 
+
+/*
+ * 
+ */
+
 public class Register_Page {
 WebDriver driver;
 	public Register_Page(WebDriver driver) {
@@ -136,7 +141,6 @@ WebDriver driver;
         click_Register();
 
         Wait.untilJqueryIsDone(driver);
-//		Screenshot.captureScreenShot(driver);
 
     }
    
@@ -159,7 +163,6 @@ WebDriver driver;
         click_Register();
         
 		Wait.untilJqueryIsDone(driver);
-//		Screenshot.captureScreenShot(driver);
     }
 
 }

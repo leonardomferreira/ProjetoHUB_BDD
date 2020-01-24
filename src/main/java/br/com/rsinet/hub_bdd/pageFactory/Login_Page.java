@@ -13,6 +13,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import net.bytebuddy.asm.Advice.Enter;
 
+/*
+ * Elementos da pagina de login
+ */
+
 public class Login_Page {
 
 	public Login_Page(WebDriver driver) {
