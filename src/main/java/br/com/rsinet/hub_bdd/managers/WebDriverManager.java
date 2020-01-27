@@ -11,7 +11,7 @@ import br.com.rsinet.hub_bdd.enums.DriverType;
 import br.com.rsinet.hub_bdd.enums.EnvironmentType;
 
 /*
- * Fabrica de diver 
+ * Fabrica de driver 
  */
 
 public class WebDriverManager {

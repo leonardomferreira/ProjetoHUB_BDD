@@ -16,7 +16,6 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "Feature", 
 	glue = { "br.com.rsinet.hub_bdd.stepDefinitions" }, 
-	tags = { "@SearchTest"}, 
 	plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" },
 	monochrome = true
 )
@@ -24,8 +23,8 @@ import cucumber.api.junit.Cucumber;
 public class TestRunner {
 	
 	public static String caminhoPasta = System.getProperty("user.dir") + "/target/cucumber-reports/screenshots/"
-			+ DataPrint.horas();
-
+			+DataPrint.horas();
+	
 	@AfterClass
 	public static void writeExtentReport() {
 		Reporter.loadXMLConfig(new File(FileReaderManager.getInstance().getConfigReader().getReportConfigPath()));

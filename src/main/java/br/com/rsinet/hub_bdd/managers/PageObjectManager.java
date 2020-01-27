@@ -7,6 +7,11 @@ import br.com.rsinet.hub_bdd.pageFactory.Login_Page;
 import br.com.rsinet.hub_bdd.pageFactory.Products_Page;
 import br.com.rsinet.hub_bdd.pageFactory.Register_Page;
 
+
+/*
+ * Criador do objeto da pagina
+ */
+
 public class PageObjectManager {
 
 	private Home_Page homePage;
@@ -18,6 +23,12 @@ public class PageObjectManager {
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
 	}
+	
+	
+	/*
+	 * Cria o objeto da classe de pagina apenas se o objeto for nulo
+	 */
+	
 	public Home_Page getHomePage() {
 		return (homePage == null) ? homePage = new Home_Page(driver) : homePage;
 	}

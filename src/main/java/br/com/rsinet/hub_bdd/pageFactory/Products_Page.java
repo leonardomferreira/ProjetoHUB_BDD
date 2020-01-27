@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 /*
- * 
+ * Elementos da pagina de produtos
  */
 
 public class Products_Page {

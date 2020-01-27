@@ -12,12 +12,11 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.cucumber.listener.Reporter;
 
-import br.com.rsinet.hub_bdd.util.Screenshot;
 import br.com.rsinet.hub_bdd.util.Wait;
 
 
 /*
- * 
+ * Elementos da pagina de registro 
  */
 
 public class Register_Page {
@@ -125,7 +124,7 @@ WebDriver driver;
     }
 
     public void RegisterValid()  {
-        enter_UserName("leonardor34");
+        enter_UserName("leonardor0026");
         enter_Email("leonardoferreiraw@hotmail.com");
         enter_Password("Teste@1234");
         enter_ConfirmPassword("Teste@1234");

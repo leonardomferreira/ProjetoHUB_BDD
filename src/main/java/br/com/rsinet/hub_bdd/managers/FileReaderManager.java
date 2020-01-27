@@ -1,5 +1,9 @@
 package br.com.rsinet.hub_bdd.managers;
 
+/*
+ *  Controla a criacao de objetos
+ */
+
 public class FileReaderManager {
 
 	private static FileReaderManager fileReaderManager = new FileReaderManager();
