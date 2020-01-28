@@ -16,7 +16,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions (features = "Feature", 
 	glue = { "br.com.rsinet.hub_bdd.stepDefinitions" }, 
-	tags = {"@RegisterTest"},
+//	tags = {"@RegisterTest"},
 	plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" },
 	monochrome = true
 )

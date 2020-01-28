@@ -32,7 +32,7 @@ public class RegisterPageSteps {
 		 driver = manager.getDriver();
 		 }
 	
-	//valid
+	//valido
 	@When("^Usuario peencher os campos com dados validos$")
 	public void usuario_peencher_os_campos_com_dados_validos() throws Throwable {
 		Reporter.addStepLog("Preenchendo os campos");
@@ -46,7 +46,7 @@ public class RegisterPageSteps {
 		System.out.println("usuario registrado");
 	}
 	
-	//Invalid
+	//Invalido
 	@When("^Usuario peencher os campos com dados invalidos$")
 	public void usuario_peencher_os_campos_com_dados_invalidos() throws Throwable {
 		Reporter.addStepLog("Preenchendo os campos");

@@ -62,15 +62,15 @@ public class ProductsPageSteps {
 	@When("^Usuario clicar no produto$")
 	public void usuario_clicar_no_produto() throws Throwable {
 		Reporter.addStepLog("Clicando no produto desejado");
-		productsPage.search_Roar();
+		productsPage.search_Mouse();
 	}
 	@Then("^O produto desejado sera exibido$")
 	public void o_produto_desejado_sera_exibido() throws Throwable {
 		Reporter.addStepLog("Exibicao do produto");
-		String TitleRoarValid = productsPage.txt_Roar();
-		productsPage.Img_Roar();
+		String TitleMouseValid = productsPage.txt_Mouse();
+		productsPage.Img_Mouse();
 		
-		assertEquals(TitleRoarValid, "HP ROAR MINI WIRELESS SPEAKER");
+		assertEquals(TitleMouseValid, "HP USB 3 BUTTON OPTICAL MOUSE");
 	}
 	// Busca por texto invalida
 	@Then("^Nunhum resultado sera exibido$")

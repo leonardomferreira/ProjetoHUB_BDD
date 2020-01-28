@@ -30,14 +30,17 @@ public class Products_Page {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"Description\"]/h1")
 	private WebElement title_Product;
 	
-	@FindBy(how = How.LINK_TEXT, using = "HP Roar Mini Wireless Speaker")
-	private WebElement lnk_Roar;
+
+	
+	@FindBy(how = How.LINK_TEXT, using = "HP USB 3 Button Optical Mouse")
+	private WebElement lnk_Mouse;
 	
 	@FindBy(how = How.XPATH, using = "//*[@id=\"searchPage\"]/div[3]/div/label/span")
 	private WebElement title_NoResult;
 	
+
 	@FindBy(how = How.XPATH, using = "//*[@id=\"Description\"]/h1")
-	private WebElement Title_Roar;
+	private WebElement Title_Mouse;
 		
 	@FindBy(how = How.NAME, using = "save_to_cart")
 	private WebElement btn_Cart;
@@ -45,21 +48,22 @@ public class Products_Page {
 	@FindBy(how = How.ID, using = "mainImg")
 	private WebElement Img_Laptop;
 	
-	@FindBy(how = How.ID, using = "mainImg")
-	private WebElement Img_Roar;
 	
-	public String title_Roar() {
-		return Title_Roar.getText();
+	@FindBy(how = How.ID, using = "mainImg")
+	private WebElement Img_Mouse;
+	
+	public String title_Mouse() {
+		return Title_Mouse.getText();
 	}
 	public String title_NoResultFor() {
 		return title_NoResult.getText();
 		
 	}
-	public void search_Roar() {
-		lnk_Roar.click();
+	public void search_Mouse() {
+		lnk_Mouse.click();
 	}
-	public String txt_Roar() {
-		return lnk_Roar.getText().toUpperCase();
+	public String txt_Mouse() {
+		return lnk_Mouse.getText().toUpperCase();
 
 	}
 	public void search_Laptop() throws InterruptedException, IOException {
@@ -77,8 +81,8 @@ public class Products_Page {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOf(Img_Laptop));
 	}
-	public void Img_Roar() {
+	public void Img_Mouse() {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOf(Img_Roar));
+		wait.until(ExpectedConditions.visibilityOf(Img_Mouse));
 	}
 }
